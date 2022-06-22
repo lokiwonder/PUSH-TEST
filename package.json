@@ -1,0 +1,55 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^19.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lokiwonder/PUSH-TEST.git"
+  },
+  "build": {
+    "appId": "com.project",
+    "copyright": "Copyright 2021 Project, Inc",
+    "publish": {
+      "provider": "github"
+    },
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "win": {
+      "verifyUpdateCodeSignature": true,
+      "publisherName": "project.owner",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "category": "Utility"
+    },
+    "directories": {
+      "output": "build",
+      "buildResources": "assets"
+    }
+  }
+}
