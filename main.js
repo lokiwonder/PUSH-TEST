@@ -66,24 +66,31 @@ Update를 클릭하면 업데이트 가능한 파일을 다운로드 받는다. 
 /* progress bar가 없으면 업데이트를 다운받는 동안 사용자가 그 내용을 알 수 없기 때문에
 progress bar는 꼭 만들어준다. */
   autoUpdater.once('download-progress', (progressObj) => {
-    progressBar = new ProgressBar({
-      text: 'Downloading...',
-      detail: 'Downloading...',
-    });
-
-    progressBar
-      .on('completed', function () {
-        console.info(`completed...`);
-        progressBar.detail = 'Task completed. Exiting...';
-      })
-      .on('aborted', function () {
-        console.info(`aborted...`);
+    dialog
+      .showMessageBox({
+        type: 'info',
+        title: 'Updating...',
+        message: 'Now updating',
+        buttons: ['Restart', 'Later'],
       });
+    // progressBar = new ProgressBar({
+    //   text: 'Downloading...',
+    //   detail: 'Downloading...',
+    // });
+
+    // progressBar
+    //   .on('completed', function () {
+    //     console.info(`completed...`);
+    //     progressBar.detail = 'Task completed. Exiting...';
+    //   })
+    //   .on('aborted', function () {
+    //     console.info(`aborted...`);
+    //   });
   });
 
   // 업데이트를 다운받고 나면 업데이트 설치 후 재시작을 요청하는 팝업이 뜬다.
   autoUpdater.on('update-downloaded', () => {
-    progressBar.setCompleted();
+    // progressBar.setCompleted();
     dialog
       .showMessageBox({
         type: 'info',
