@@ -7,12 +7,30 @@
     <link href="./styles.css" rel="stylesheet">
     <title>Hello World!</title>
   </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-    update 1.0.1 update
+  <style>
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    body {
+      height: 100vh;
+      background-color: #002c5f;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    p {
+      margin: 20px;
+      color: #ffffff;
+      text-align: center;
+    }
+  </style>
+  <body background-color="">
+    <h1>myHyundai</h1>
+    <h5>Test version : <span style="color: #ff0000; font-weight: bold;">0.0.1</span></h5> 
+
+    <p>Notification appears 5 seconds after the app runs.</p>
 
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
