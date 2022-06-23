@@ -1,6 +1,6 @@
 {
   "name": "electron-quick-start",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
@@ -16,7 +16,8 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^19.0.4"
+    "electron": "^19.0.4",
+    "electron-builder": "^23.1.0"
   },
   "repository": {
     "type": "git",
@@ -51,5 +52,9 @@
       "output": "build",
       "buildResources": "assets"
     }
+  },
+  "dependencies": {
+    "electron-progressbar": "^2.0.1",
+    "electron-updater": "^5.0.5"
   }
 }
