@@ -2,6 +2,7 @@
 const { app, BrowserWindow, dialog } = require('electron')
 const { autoUpdater } = require('electron-updater');
 const path = require('path');
+const ProgressBar = require('electron-progressbar');
 
 autoUpdater.autoDownload = false;
 
